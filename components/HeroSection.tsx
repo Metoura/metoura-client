@@ -1,46 +1,65 @@
 import { NextPage } from 'next'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { ChangeEvent, useRef, useState } from 'react'
 import Header from './Header'
 import { MdArrowDropDown, MdSearch } from 'react-icons/md'
 import cats from './assets/categories'
 import locations from './assets/places'
+// import {document}
 
 
 const HeroSection: NextPage = () => {
 
+  const categoryElement = useRef<HTMLParagraphElement>(null)
+  const placeElement = useRef<HTMLInputElement>(null)
   const [categories, setCategories] = useState(cats)
   const [selectedCategory, setSelectedCategory] = useState("")
   const [places, setPlaces] = useState(locations)
   const [selectedPlace, setSelectedPlace] = useState("")
 
-  const [filterChoice, setFilterChoice] : [null|string, Dispatch<SetStateAction<null | string>> ] = useState(null)
+  const [filterChoice, setFilterChoice] = useState<string | null>(null)
 
+  if (typeof document !== "undefined") {
+    document.addEventListener('click', (e) => {
+      (e.target !== categoryElement.current && e.target !== placeElement.current) && setFilterChoice(null)
+    })
+  }
 
+  const searchingPlace = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    const compatibleLocations = locations.filter((location) => location.name.toLowerCase().indexOf(value.toLowerCase()) !== -1)
+    console.log(compatibleLocations)
+    setPlaces(compatibleLocations)
+    setSelectedPlace(value)
+  }
 
   return (
     <>
       <section className='relative box-border h-[60vh] md:h-[70vh]  bg-red-300 '>
         <div
-          className="bg-hero absolute h-full w-4/6 overflow-hidden"
-        // style="background-image: url('./assets/images/heroImage2.jpg')"
+          className="bg-hero absolute w-full h-full overflow-hidden"
         >
-          {/* <Image
+          <Image
             src={require("./assets/images/heroImage.png")}
             alt="Hero Image"
-            width="100%" 
-            height="100%" 
-            layout="responsive" 
-            objectFit="contain"
-          /> */}
+            width="100%"
+            height="100%"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
         <div className='flex flex-col w-full px-4 py-10 md:px-24 md:py-20 h-full bg-gray-900/90 relative z-10'>
           <Header />
 
           <div>
-            <h1 className='text-5xl md:text-7xl font-bold leading-[3.5rem] mb-3  text-white'>
-              Find your next <br /> tourist attraction
-            </h1>
+            <div className='text-4xl md:text-8xl font-bold leading-[3.5rem] mb-3 md:mb-8  text-white'>
+              <h1 className='md:mb-3'>
+                Find your next
+              </h1>
+              <h1>
+              tourist attraction
+              </h1>
+            </div>
             <p className='text-white '>
               Search for tourist centres near and far
             </p>
@@ -52,7 +71,7 @@ const HeroSection: NextPage = () => {
             <div className='relative flex justify-between items-center'>
 
               <div onClick={() => setFilterChoice("category")} className="flex bg-white px-2 py-5 border-r-[1px] items-center border-[#000000] hover:cursor-pointer">
-                <p className='flex'>
+                <p ref={categoryElement} className='flex'>
                   {selectedCategory || "Category"}
                 </p>
 
@@ -66,8 +85,12 @@ const HeroSection: NextPage = () => {
 
                 </div>
 
-                <div className='w-full bg-white'>
-                  <input className='w-full px-4 py-5 outline-none' placeholder='Where would like to go' />
+                <div onClick={() => setFilterChoice("places")} className='w-full bg-white'>
+                  <input className='w-full px-4 py-5 outline-none'
+                    ref={placeElement}
+                    placeholder='Where would like to go'
+                    onChange={(e) => { searchingPlace(e) }}
+                    value={selectedPlace} />
                 </div>
 
                 <div className='p-5 bg-primary'>
@@ -82,10 +105,14 @@ const HeroSection: NextPage = () => {
 
             {
               filterChoice === "category" &&
-              <ul className='relative top-1 shadow-md shadow-gray-300 rounded-md overflow-hidden bg-red-300 w-[30%] md:w-[20%]'>
+              <ul className='relative top-1 shadow-md shadow-gray-300 rounded-md overflow-hidden bg-red-300 w-[30%] max-h-[180px] overflow-y-auto md:w-[20%]'>
                 {
                   categories.map((category, index) => (
-                    <li onClick={() => setSelectedCategory(category.name)} key={index} className='p-3 bg-white hover:bg-gray-400 hover:cursor-pointer border-b-[1px]'>
+                    <li onClick={() => {
+                      setSelectedCategory(category.name);
+                      setFilterChoice(null)
+                    }}
+                      key={index} className='p-3 bg-white hover:bg-gray-400 hover:cursor-pointer border-b-[1px]'>
                       {`${category.name}`}
                     </li>
                   ))
@@ -95,20 +122,18 @@ const HeroSection: NextPage = () => {
             }
 
             {
-              false &&
-              <ul className='relative top-1 shadow-md shadow-gray-300 rounded-md overflow-hidden bg-red-300 w-full'>
-                <li className='p-3 bg-white hover:bg-gray-400 hover:cursor-pointer border-b-[1px]'>
-                  Category 1
-                </li>
-                <li className='p-3 bg-white hover:bg-gray-400 hover:cursor-pointer border-b-[1px]'>
-                  Category 1
-                </li>
-                <li className='p-3 bg-white hover:bg-gray-400 hover:cursor-pointer border-b-[1px]'>
-                  Category 1
-                </li>
-                <li className='p-3 bg-white hover:bg-gray-400 hover:cursor-pointer border-b-[1px]'>
-                  Category 1
-                </li>
+              filterChoice === "places" &&
+              <ul className='relative top-1 shadow-md shadow-gray-300 rounded-md overflow-hidden max-h-[180px] overflow-y-auto bg-red-300 w-full'>
+                {
+                  places.map((place, index) => (
+                    <li onClick={() => {
+                      setSelectedPlace(place.name);
+                      setFilterChoice(null)
+                    }} key={index} className='p-3 bg-white hover:bg-gray-400 hover:cursor-pointer border-b-[1px]'>
+                      {`${place.name}`}
+                    </li>
+                  ))
+                }
 
               </ul>
             }

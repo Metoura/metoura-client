@@ -10,7 +10,7 @@ import {MdMenu} from 'react-icons/md'
 const Header  : NextPage= () => {
   return (
 
-    <header className='flex justify-between items-center mb-10 md:mb-36'> 
+    <header className='flex justify-between items-center mb-14 md:mb-36'> 
 
         <div>
           <Image
