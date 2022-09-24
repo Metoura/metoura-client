@@ -37,7 +37,7 @@ const HeroSection: NextPage = () => {
     <>
       <section className='relative box-border h-[60vh] md:h-[70vh]  bg-red-300 '>
         <div
-          className="bg-hero absolute w-full h-full overflow-hidden"
+          className="absolute w-full h-full overflow-hidden bg-hero"
         >
           <Image
             src={require("./assets/images/heroImage.png")}
@@ -48,10 +48,10 @@ const HeroSection: NextPage = () => {
             objectFit="cover"
           />
         </div>
-        <div className='flex flex-col w-full px-4 py-10 md:px-24 md:py-20 h-full bg-gray-900/90 relative z-10'>
+        <div className='relative z-10 flex flex-col w-full h-full px-4 py-10 md:px-24 md:py-15 bg-gray-900/90'>
           <Header />
 
-          <div>
+          <div className='flex flex-col justify-center h-full'>
             <div className='text-4xl md:text-8xl font-bold leading-[3.5rem] mb-3 md:mb-8  text-white'>
               <h1 className='md:mb-3'>
                 Find your next
@@ -62,13 +62,13 @@ const HeroSection: NextPage = () => {
             </div>
             <p className='text-white '>
               Search for tourist centres near and far
-            </p>
+            </p> 
           </div>
         </div>
 
-        <div className='relative w-full box-border flex flex-col px-4 md:px-24 z-10 -top-10'>
-          <div className='relative flex w-full flex-col bg-white border-2 overflow-hidden border-orange-300 items-between rounded-md'>
-            <div className='relative flex justify-between items-center'>
+        <div className='box-border relative z-10 flex flex-col w-full px-4 md:px-24 -top-10'>
+          <div className='relative flex flex-col w-full overflow-hidden bg-white border-2 border-orange-300 rounded-md items-between'>
+            <div className='relative flex items-center justify-between'>
 
               <div onClick={() => setFilterChoice("category")} className="flex bg-white px-2 py-5 border-r-[1px] items-center border-[#000000] hover:cursor-pointer">
                 <p ref={categoryElement} className='flex'>
@@ -80,7 +80,7 @@ const HeroSection: NextPage = () => {
                 </span>
               </div>
 
-              <div className='flex flex-1 items-center'>
+              <div className='flex items-center flex-1'>
                 <div>
 
                 </div>

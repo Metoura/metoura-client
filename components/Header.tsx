@@ -10,7 +10,7 @@ import {MdMenu} from 'react-icons/md'
 const Header  : NextPage= () => {
   return (
 
-    <header className='flex justify-between items-center mb-14 md:mb-36'> 
+    <header className='flex items-center justify-between mb-14 md:mb-15'> 
 
         <div>
           <Image
@@ -21,7 +21,7 @@ const Header  : NextPage= () => {
         </div>
       
 
-      <nav className='hidden w-3/6 md:w-2/5 lg:w-2/6 text-white hover:text-lightPink  md:flex'>
+      <nav className='hidden w-3/6 text-white md:w-2/5 lg:w-2/6 hover:text-lightPink md:flex'>
           <ul className='flex justify-between w-full'>
             <Link href="#">Home</Link>
             <Link href="#">About</Link>
@@ -30,11 +30,11 @@ const Header  : NextPage= () => {
           </ul>
       </nav>
 
-      <button className='hidden md:flex py-2 px-9 text-white font-bold bg-primary rounded-lg'>
+      <button className='hidden py-2 font-bold text-white rounded-lg md:flex px-9 bg-primary'>
         Sign in
       </button>
 
-      <div className='flex md:hidden w-1/4 justify-between'>
+      <div className='flex justify-between w-1/4 md:hidden'>
         <span>
           <HiOutlineUserCircle size={30} color='white' />
         </span>
