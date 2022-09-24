@@ -48,7 +48,7 @@ const HeroSection: NextPage = () => {
             objectFit="cover"
           />
         </div>
-        <div className='relative z-10 flex flex-col w-full h-full px-4 py-10 md:px-24 md:py-15 bg-gray-900/90'>
+        <div className='relative z-10 flex flex-col w-full h-full px-4 py-10 md:px-24 md:py-16 bg-gray-900/90'>
           <Header />
 
           <div className='flex flex-col justify-center h-full'>
