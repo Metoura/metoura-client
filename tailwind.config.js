@@ -5,7 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    
+
     screens: {
       sm: "640px",
       md: "768px",
@@ -13,6 +13,8 @@ module.exports = {
       xlg: "1280px",
       "2xl": "1536px",
     },
+
+
     backgroundImage: {
       backgroundImage: (theme) => ({
         'hero': "url('./assets/images/heroImage2.jpg')"
@@ -21,11 +23,11 @@ module.exports = {
     },
     extend: {
       colors: {
-       primary: "#ED353F",
-       white: "#FFFFFF",
-       black: "#000000",
-       lightPink: "#FDF0F1",
-       gold: "#FCB615"
+        primary: "#ED353F",
+        white: "#FFFFFF",
+        black: "#000000",
+        lightPink: "#FDF0F1",
+        gold: "#FCB615",
       }
     },
   },
