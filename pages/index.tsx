@@ -1,13 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import HeroSection from '../components/HeroSection'
 import Footer from '../components/home/Footer'
 import Newsletter from '../components/home/Newsletter'
 import TouristReviewCard from '../components/home/TouristReviewCard'
+import Body from '../components/home/Body'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +17,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head> 
 
-      {/* <HeroSection /> */}
+      <HeroSection/>
+      <Body/>
       <TouristReviewCard/>
     </div>
   )

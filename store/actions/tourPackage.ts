@@ -1,0 +1,1 @@
+export const ADD_TOUR_PACKAGE = 'add tour package';
