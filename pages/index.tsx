@@ -3,9 +3,9 @@ import Head from 'next/head'
 import HeroSection from '../components/HeroSection'
 import Footer from '../components/home/Footer'
 import Newsletter from '../components/home/Newsletter'
-import TouristReviewCard from '../components/home/TouristReviewCard'
 import Body from '../components/home/Body'
 import styles from '../styles/Home.module.css'
+import TouristReviewBody from '../components/home/TouristReviewBody'
 
 const Home: NextPage = () => {
 
@@ -17,9 +17,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head> 
 
-      <HeroSection/>
-      <Body/>
-      <TouristReviewCard/>
+      {/* <HeroSection/>
+      <Body/> */}
+    
+      <TouristReviewBody/>
     </div>
   )
 }

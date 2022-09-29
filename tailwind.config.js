@@ -1,11 +1,9 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-
     screens: {
       sm: "640px",
       md: "768px",
@@ -13,8 +11,6 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
     },
-
-
     backgroundImage: {
       backgroundImage: (theme) => ({
         'hero': "url('./assets/images/heroImage2.jpg')"
@@ -24,13 +20,6 @@ module.exports = {
     extend: {
       colors: {
         primary: "#ED353F",
-<<<<<<< HEAD
-        white: "#FFFFFF",
-        black: "#000000",
-        lightPink: "#FDF0F1",
-        gold: "#FCB615",
-      }
-=======
         textColor: "#101010",
         white: "#FFFFFF",
         black: "#000000",
@@ -71,7 +60,6 @@ module.exports = {
         350: "350px",
         620: "620px",
       },
->>>>>>> e70374725fd31f6d2a0b96af880f7e21cbfa4db1
     },
   },
   plugins: [],

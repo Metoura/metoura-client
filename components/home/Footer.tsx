@@ -4,7 +4,6 @@ import React from 'react'
 import { MdFacebook } from 'react-icons/md'
 import { FaTwitter } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
-import { Head, List } from './Footer.Style'
 
 const Footer: NextPage = () => {
     return (
@@ -26,27 +25,27 @@ const Footer: NextPage = () => {
                     </div>
 
                     <div className='flex-1'>
-                        <Head>About</Head>
-                        <List href='#'>Who are we?</List>
-                        <List href='#'>Trust and Safety</List>
-                        <List href='#'>Careers</List>
-                        <List href='#'>Resource and policies</List>
+                        <div className='mt-24 text-black text-2xl font-bold mb-2'>About</div>
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Who are we?</a>
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Trust and Safety</a>
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Careers</a>
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Resource and policies</a>
                     </div>
 
                     <div className='flex-1'>
-                        <Head>Explore</Head>
-                        <List href='#'>Add a place</List>
-                        <List href='#'>Join a tour</List>
-                        <List href='#'>Write a review</List>
-                        <List href='#'>Blog</List>
-                        <List href='#'>Help center</List>
+                        <div className='mt-24 text-black text-2xl font-bold mb-2'>Explore</div>
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Add a place</a>
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Join a tour</a>
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Write a review</a>
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Blog</a>
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Help center</a>
                     </div>
 
                     <div className='flex-1'>
-                        <Head>Do business with us</Head>
-                        <List href='#'>Owners</List>
-                        <List href='#'>Ad placement</List>
-                        <List href='#'>Become an affliate</List>
+                        <div className='mt-24 text-black text-2xl font-bold mb-2'>Do business with us</div>
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary'  href='#'>Owners</a >
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary'  href='#'>Ad placement</a >
+                        <a className='flex mt-1 text-black text-sm font-medium leading-8 hover:text-primary'  href='#'>Become an affliate</a >
                     </div>
                 </div>
 

@@ -15,17 +15,13 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
-<<<<<<< HEAD
     "react-responsive-carousel": "^3.2.23",
     "react-slideshow-image": "^4.0.5",
-    "styled-components": "^5.3.5"
-=======
-    "react-redux": "^8.0.4",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "react-redux": "^8.0.4"
   },
   "resolutions": {
     "styled-components": "^5"
->>>>>>> e70374725fd31f6d2a0b96af880f7e21cbfa4db1
   },
   "devDependencies": {
     "@types/node": "18.7.16",
