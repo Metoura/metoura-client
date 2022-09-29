@@ -42,7 +42,7 @@ const TouristReviewBody: NextPage = () => {
                         <div key={index}>
                             <div className="w-[320px] h-[320px] mt-6 bg-white shadow-2xl rounded px-6 pt-6">
                                 <div className="w-[full] h-[70px] mb-5 flex items-center">
-                                    <div className="w-16 ">
+                                    <div className="w-16">
                                         <div className='flex justify-start items-center gap-4 w-[100%]'>
                                             <Image
                                                 src={`${d?.touristPics}/${d?.id}`}
@@ -62,26 +62,26 @@ const TouristReviewBody: NextPage = () => {
                                 </div>
 
                                 <div className='relative flex flex-row overflow-x-auto h-[160px] w-[100%]'>
-                                    <div>
+                                    
                                         <Image
                                             src={`${d?.displayImagePath}/${d?.id}`}
                                             alt="Tourist Center Image"
                                             layout="fill"
                                             objectFit="cover"
                                         />
-                                    </div>
-                                    <div>
-                                        <Image
-                                            src={`${d?.displayImagePath}/${d?.id}`}
-                                            alt="Tourist Center Image"
-                                            layout="fill"
-                                            objectFit="cover"
-                                        />
-                                    </div>
+                                    
                                 </div>
+
+                                {/* <div
+                                    className='absolute bottom-3 translate-x-[-50%] flex w-5 h-5 rounded-[50%] border-3 border-[#f1f1f1] my-0 mx-1 bg-[#f1f1f1]'
+                                >
+                                </div> */}
+
                             </div>
                         </div>
                     )}
+
+
                 {/* <div className={classes.containerDots}>
                     {Array.from({ length: 5 }).map((item:any, index) => (
                         <div key={item}
@@ -97,22 +97,3 @@ const TouristReviewBody: NextPage = () => {
 
 
 export default TouristReviewBody;
-
-{/* <div className=" h-[70px] mb-5 flex items-center">
-                    <div className="w-16 ">
-                        <Tourist>
-                            <Image
-                                src={require("../assets/images/heroImage.png")}
-                                alt="Hero Image"
-                                width="100%"
-                                height="95%"
-                                objectFit="cover"
-                                className="rounded-full"
-                            />
-                        </Tourist>
-                    </div>
-                    <div className=" w-[150px] ml-4 text-black whitespace-nowrap">
-                        <p className=" h-[40%] text-lg font-semibold">@abbymahn</p>
-                        <p className=" h-[60%] text-xs font-medium ">at Lekki conservation Centre</p>
-                    </div>
-                </div> */}
