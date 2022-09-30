@@ -2,13 +2,13 @@ import type { NextPage } from 'next'
 import React, { useState } from 'react'
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa'
 
+
 type Props = {
     id: string,
     children: any
 }
 
 const CardScroller: NextPage<Props> = ({ id, children }) => {
-
     const scrollLength = 500
 
 
@@ -49,26 +49,31 @@ const CardScroller: NextPage<Props> = ({ id, children }) => {
     }
 
     return (
-
-        <div className='hidden md:flex h-full w-full items-center absolute top-0'>
-            <div className="w-full flex justify-between items-center">
+        <div className='md:relative'>
+            <div id={id} className="flex flex-row overflow-y-clip overflow-x-auto md:overflow-x-hidden gap-5 ">
                 {
-                    isScrollLeftActive &&
-                    <div onClick={() => scrollLeft()} className="circle bg-[white] ml-[-30px] cursor-pointer hover:bg-primary transition-all duration-500 mr-[-20px]" >
-                        <FaLongArrowAltLeft size={20} className="m-3 text-black" />
-                    </div>
+                    children
                 }
-                <div className="flex-1"></div>
-                {
-                    isScrollRightActive &&
-                    <div onClick={() => scrollRight()} className="circle bg-[white] ml-[-30px] cursor-pointer hover:bg-primary transition-all duration-500 mr-[-30px]">
-                        <FaLongArrowAltRight size={20} className="m-3 text-black " />
-                    </div>
-                }
+            </div>
+            <div className='absolute w-full top-[calc(100%/2.5)] flex items-center '>
+                <div className=" w-full hidden md:flex justify-between items-center">
+                    {
+                        isScrollLeftActive &&
+                        <div onClick={() => scrollLeft()} className="circle bg-[white] ml-[-30px] cursor-pointer hover:bg-primary transition-all duration-500 mr-[-20px]" >
+                            <FaLongArrowAltLeft size={15} className="m-3 text-black" />
+                        </div>
+                    }
+                    <div className="flex-1"></div>
+                    {
+                        isScrollRightActive &&
+                        <div onClick={() => scrollRight()} className="circle bg-[white] ml-[-30px] cursor-pointer hover:bg-primary transition-all duration-100 mr-[-30px]">
+                            <FaLongArrowAltRight size={15} className="m-3 text-black " />
+                        </div>
+                    }
 
+                </div>
             </div>
         </div>
-
     )
 }
 

@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection'
 import Body from '../components/home/Body'
 import styles from '../styles/Home.module.css'
 import TouristReviewBody from '../components/home/TouristReviewBody'
+import Newsletter from '../components/home/Newsletter'
 
 const Home: NextPage = () => {
 
@@ -16,9 +17,8 @@ const Home: NextPage = () => {
       </Head>
 
 
-      {/* <HeroSection/>
-      <Body/> */}
-    
+      <HeroSection/>
+      <Body/>
       <TouristReviewBody/>
     </div>
   )

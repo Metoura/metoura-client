@@ -13,7 +13,8 @@ module.exports = {
     },
     backgroundImage: {
       backgroundImage: (theme) => ({
-        'hero': "url('./assets/images/heroImage2.jpg')"
+        'hero': "url('./assets/images/heroImage2.jpg')",
+
       })
       // hero: "url('./components/assets/images/heroImage2.png')",
     },
@@ -24,7 +25,7 @@ module.exports = {
         white: "#FFFFFF",
         black: "#000000",
         lightPink: "#FDF0F1",
-        gold: "#FCB615"
+        gold: "#FCB615",
       },
       width: {
         150: "150px",
