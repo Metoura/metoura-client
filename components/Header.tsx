@@ -6,7 +6,6 @@ import {HiOutlineUserCircle} from 'react-icons/hi'
 import {MdMenu} from 'react-icons/md'
 
 
-
 const Header  : NextPage= () => {
   return (
 
