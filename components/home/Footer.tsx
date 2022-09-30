@@ -51,10 +51,10 @@ const Footer: NextPage = () => {
 
 
                 <div className='flex flex-col md:flex-row h-[60px] mt-[340px]  md:mt-9'>
-                    <div className='flex justify-center items-center flex-[1] text-lg font-medium'>
+                    <div className='flex justify-center items-center flex-[1] text-sm md:text-lg font-medium'>
                         &copy; 2022. Tourbuddy LLC All rights reserved
                     </div>
-                    <div className='flex justify-around items-center flex-[2] font-medium text-[17px] leading-[25px] underline'>
+                    <div className='flex justify-around items-center flex-[2] font-medium text-sm md:text-[17px] leading-[25px] underline whitespace-nowrap gap-2 md:gap-0'>
                         <a href="#">Terms of use</a>
                         <a href="#">Privacy policy</a>
                         <a href="#">Cookies</a>
