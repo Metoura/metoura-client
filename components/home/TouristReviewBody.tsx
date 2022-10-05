@@ -15,7 +15,7 @@ const TouristReviewBody: NextPage = () => {
             <Newsletter />
             <div className='flex flex-col md:gap-48 gap-24'>
                 <div className="relative px-4 md:px-24 md:top-24 top-10">
-                    <h2 className="text-xl md:text-3xl font-bold">Check out other tourists</h2>
+                    <h2 className="text-xl md:text-3xl font-bold mb-8 md:mb-10">Check out other tourists</h2>
                     <div>
                         <CardScroller id="touristReview">
                             {
