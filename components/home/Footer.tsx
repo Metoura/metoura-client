@@ -7,7 +7,7 @@ import { FaInstagram } from 'react-icons/fa'
 
 const Footer: NextPage = () => {
     return (
-        <div className='flex flex-col w-full h-[850px] md:h-[600px] bg-lightPink '>
+        <div className='flex flex-col w-full h-[850px] md:h-[500px] bg-lightPink '>
             <div className='px-4 pt-0 md:px-24'>
                 <div className='flex flex-col md:flex-row md:h-[350px] h-[400px]'>
                     <div className='flex flex-col md:gap-4 md:flex-[2] justify-center items-center'>-
@@ -41,7 +41,7 @@ const Footer: NextPage = () => {
                         <a className='flex justify-center md:justify-start  mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Help center</a>
                     </div>
 
-                    <div className='flex-1'>
+                    <div className='flex-1 whitespace-nowrap'>
                         <div className='md:mt-24 mt-8 text-black md:text-2xl text-lg md:text-start text-center font-bold mb-2'>Do business with us</div>
                         <a className='flex justify-center md:justify-start  mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Owners</a >
                         <a className='flex justify-center md:justify-start  mt-1 text-black text-sm font-medium leading-8 hover:text-primary' href='#'>Ad placement</a >
