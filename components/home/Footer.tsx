@@ -10,7 +10,7 @@ const Footer: NextPage = () => {
         <div className='flex flex-col w-full h-[850px] md:h-[500px] bg-lightPink '>
             <div className='px-4 pt-0 md:px-24'>
                 <div className='flex flex-col md:flex-row md:h-[350px] h-[400px]'>
-                    <div className='flex flex-col md:gap-4 md:flex-[2] justify-center items-center'>-
+                    <div className='flex flex-col md:gap-4 md:flex-[1] justify-center items-start'>-
                         <Image
                             src={require('../assets/icons/metouraLogo.svg')}
                             alt="metoura logo"
