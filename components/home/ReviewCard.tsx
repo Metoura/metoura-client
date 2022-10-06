@@ -56,7 +56,7 @@ const ReviewCard: NextPage<Props> = ({ review }) => {
                                 className=' flex-1 rounded-sm'
                             />
                         </div>
-                        <div className='w-[40px] h-[15px] flex items-center gap-1 justify-center overflow-y-auto cursor-pointer z-50'>
+                        <div className='w-[40px] h-[15px] flex items-center gap-1 justify-center cursor-pointer z-50'>
                             {
                                 review.imagePaths.map((i, index) =>
                                     <div key={index} onClick={() => goToImage(index)}>
