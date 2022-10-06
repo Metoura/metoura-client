@@ -9,14 +9,12 @@ const BlogCard: NextPage<Props> = ({ blog }) => {
     return (
         <div>
             <div className="w-[300px] h-[320px] md:w-[300px] md:h-[350px] flex flex-col rounded">
-                <div className='h-[70%]'>
+                <div className='h-[70%] w-[100%] relative'>
                     <Image
                         src={`${blog.displayImagePath}/${blog.id}`}
                         alt="Blog Image"
-                        width='300px'
-                        height='228px'
                         objectFit="cover"
-                       
+                       layout='fill'
                     />
                 </div>
 

@@ -5,5 +5,3 @@ interface Blog{
     imagePaths: string[],
     displayImagePath: string
 }
-
-export {};
