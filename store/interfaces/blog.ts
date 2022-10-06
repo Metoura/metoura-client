@@ -1,3 +1,5 @@
+//@ts-ignore
+
 interface Blog{
     id: number,
     title: string,
